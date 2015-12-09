@@ -25,7 +25,7 @@ import static org.junit.Assert.*;
  * @author Len Payne <len.payne@lambtoncollege.ca>
  */
 public class ShipTest {
-    
+
     public ShipTest() {
     }
 
@@ -39,7 +39,7 @@ public class ShipTest {
         String expResult = "SS Minnow";
         instance.setName(expResult);
         String result = instance.getName();
-        assertEquals(expResult, result);        
+        assertEquals(expResult, result);
     }
 
     /**
@@ -53,11 +53,28 @@ public class ShipTest {
             String expResult = "IMO 9174725";
             instance.setId(expResult);
             String result = instance.getId();
-            assertEquals(expResult, result);            
+            assertEquals(expResult, result);
         } catch (Exception ex) {
             fail("Exception thrown when setting valid ID");
         }
-    }    
+    }
+
+    /**
+     * Test of getId method, of class Ship.
+     */
+    @Test
+    public void testBadId() {
+        try {
+            System.out.println("id");
+            Ship instance = new Ship();
+            String expResult = "IMO 9174721";
+            instance.setId(expResult);
+            String result = instance.getId();
+            fail("Exception not thrown when setting invalid ID");
+        } catch (Exception ex) {
+            System.out.println("Exception thrown when setting invalid ID");
+        }
+    }
 
     /**
      * Test of getYear method, of class Ship.
@@ -69,8 +86,8 @@ public class ShipTest {
         String expResult = "1964";
         instance.setYear(expResult);
         String result = instance.getYear();
-        assertEquals(expResult, result);        
-    }    
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of toString method, of class Ship.
@@ -90,5 +107,5 @@ public class ShipTest {
             fail("Exception thrown when setting valid ID");
         }
     }
-    
+
 }

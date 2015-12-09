@@ -23,7 +23,7 @@ import static org.junit.Assert.*;
  * @author Len Payne <len.payne@lambtoncollege.ca>
  */
 public class CruiseShipTest {
-    
+
     public CruiseShipTest() {
     }
 
@@ -37,7 +37,7 @@ public class CruiseShipTest {
         int expResult = 2435;
         instance.setMaxPassengers(expResult);
         int result = instance.getMaxPassengers();
-        assertEquals(expResult, result);        
+        assertEquals(expResult, result);
     }
 
     /**
@@ -50,7 +50,7 @@ public class CruiseShipTest {
         String expResult = "RMS Titanic";
         instance.setName(expResult);
         String result = instance.getName();
-        assertEquals(expResult, result);        
+        assertEquals(expResult, result);
     }
 
     /**
@@ -64,11 +64,28 @@ public class CruiseShipTest {
             String expResult = "IMO 9074729";
             instance.setId(expResult);
             String result = instance.getId();
-            assertEquals(expResult, result);            
+            assertEquals(expResult, result);
         } catch (Exception ex) {
             fail("Exception thrown when setting valid ID");
         }
-    }    
+    }
+
+    /**
+     * Test of getId method, of class CruiseShip.
+     */
+    @Test
+    public void testBadId() {
+        try {
+            System.out.println("id");
+            CruiseShip instance = new CruiseShip();
+            String expResult = "IMO 9074721";
+            instance.setId(expResult);
+            String result = instance.getId();
+            fail("Exception not thrown when setting invalid ID");
+        } catch (Exception ex) {
+            System.out.println("Exception thrown when setting invalid ID");
+        }
+    }
 
     /**
      * Test of getYear method, of class CruiseShip.
@@ -80,8 +97,8 @@ public class CruiseShipTest {
         String expResult = "1912";
         instance.setYear(expResult);
         String result = instance.getYear();
-        assertEquals(expResult, result);        
-    }    
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of toString method, of class CruiseShip.

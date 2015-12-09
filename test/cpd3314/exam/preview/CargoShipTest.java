@@ -23,7 +23,7 @@ import static org.junit.Assert.*;
  * @author Len Payne <len.payne@lambtoncollege.ca>
  */
 public class CargoShipTest {
-    
+
     public CargoShipTest() {
     }
 
@@ -37,7 +37,7 @@ public class CargoShipTest {
         int expResult = 25400;
         instance.setMaxTonnage(expResult);
         int result = instance.getMaxTonnage();
-        assertEquals(expResult, result);        
+        assertEquals(expResult, result);
     }
 
     /**
@@ -50,7 +50,7 @@ public class CargoShipTest {
         String expResult = "SS Edmund Fitzgerald";
         instance.setName(expResult);
         String result = instance.getName();
-        assertEquals(expResult, result);        
+        assertEquals(expResult, result);
     }
 
     /**
@@ -64,11 +64,28 @@ public class CargoShipTest {
             String expResult = "IMO 8074722";
             instance.setId(expResult);
             String result = instance.getId();
-            assertEquals(expResult, result);            
+            assertEquals(expResult, result);
         } catch (Exception ex) {
             fail("Exception thrown when setting valid ID");
         }
-    }    
+    }
+
+    /**
+     * Test of getId method, of class CruiseShip.
+     */
+    @Test
+    public void testBadId() {
+        try {
+            System.out.println("id");
+            CargoShip instance = new CargoShip();
+            String expResult = "IMO 8074723";
+            instance.setId(expResult);
+            String result = instance.getId();
+            fail("Exception not thrown when setting invalid ID");
+        } catch (Exception ex) {
+            System.out.println("Exception thrown when setting invalid ID");
+        }
+    }
 
     /**
      * Test of getYear method, of class CargoShip.
@@ -80,8 +97,8 @@ public class CargoShipTest {
         String expResult = "1958";
         instance.setYear(expResult);
         String result = instance.getYear();
-        assertEquals(expResult, result);        
-    }    
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of toString method, of class CargoShip.
