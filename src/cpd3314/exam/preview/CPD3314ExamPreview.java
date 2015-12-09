@@ -25,9 +25,9 @@ package cpd3314.exam.preview;
 
 /*
  * Design a Ship class that has the following members:
- * - A field for the name of the ship (String)
- * - A field for the id of the ship (String)
- * - A field for the year tat the ship was built (String)
+ * - A field for the name of the ship (name:String)
+ * - A field for the id of the ship (id:String)
+ * - A field for the year that the ship was built (year:String)
  * - A no-arg constructor and appropriate accessors and mutators
  * - The setId(String) method should verify that the ship's ID is a valid IMO
  *   number, where an IMO number is displayed as the letters "IMO" and a space,
@@ -42,7 +42,7 @@ package cpd3314.exam.preview;
  *
  * Design a CruiseShip class that extends the Ship class. Teh CruiseShip class 
  * should have the following additional members:
- * - A field for the maximum number of passengers (int)
+ * - A field for the maximum number of passengers (maxPassengers:int)
  * - A no-arg constructor and appropriate accessors and mutators
  * - A toString method that overrides the toString method in the base class. The 
  *   CruiseShip class's toString method should display only the ship's name, id,
@@ -50,7 +50,7 @@ package cpd3314.exam.preview;
  *
  * Design a CargoShip class that extends the Ship class. The CargoShip class 
  * should have the following members:
- * - A field for the cargo capacity in tonnage (int)
+ * - A field for the cargo capacity in tonnage (maxTonnage:int)
  * - A no-arg constructor and appropriate accessors and mutators
  * - A toString method that overrides the toString method in the base class. The 
  *   CargoShip class's toString method should dispaly only the ship's name, id,
