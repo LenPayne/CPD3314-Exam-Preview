@@ -37,7 +37,7 @@ package cpd3314.exam.preview;
  *   "IMO 9074729": (9×7) + (0×6) + (7×5) + (4×4) + (7×3) + (2×2) = 139. If the
  *   check fails, the setId() method should throw an Exception.
  * - A toString method that displays the ship's name, id and the year it was 
- *   built. eg- "SS Minnow - IMO 9174721 - 1964"
+ *   built. eg- "SS Minnow, IMO 9174721, 1964"
  *
  * Design a CruiseShip class that extends the Ship class. Teh CruiseShip class 
  * should have the following additional members:
