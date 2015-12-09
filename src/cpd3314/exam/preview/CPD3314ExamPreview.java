@@ -37,7 +37,7 @@ package cpd3314.exam.preview;
  *   "IMO 9074729": (9×7) + (0×6) + (7×5) + (4×4) + (7×3) + (2×2) = 139. If the
  *   check fails, the setId() method should throw an Exception.
  * - A toString method that displays the ship's name, id and the year it was 
- *   built. eg- "SS Minnow, IMO 9174721, 1964"
+ *   built. eg- "SS Minnow, IMO 9174725, 1964"
  *
  * Design a CruiseShip class that extends the Ship class. Teh CruiseShip class 
  * should have the following additional members:
@@ -55,7 +55,7 @@ package cpd3314.exam.preview;
  * - A toString method that overrides the toString method in the base class. The 
  *   CargoShip class's toString method should dispaly only the ship's name, id,
  *   year it was built, and the ship's cargo capacity.
- *   eg- "SS Edmund Fitzgerald, IMO 8074728, 1958, 25400 tons"
+ *   eg- "SS Edmund Fitzgerald, IMO 8074722, 1958, 25400 tons"
  *
  * Demonstrate the classes in the main method with an array of Ship objects and
  * iterate over them, calling their toString method.
